@@ -351,7 +351,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0015000403, y: -0.0915018}
@@ -464,7 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d89a1cb8fce42f479b29ebaa3e7a689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySettings: {fileID: 0}
+  enemySettings: {fileID: 11400000, guid: 73578338c602f6848ba64dd4dd09f818, type: 2}
+  _detectionArea: {fileID: 1863992380}
 --- !u!1 &674303191
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +533,7 @@ GameObject:
   - component: {fileID: 698026342}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,6 +823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863992378}
   - component: {fileID: 1863992379}
+  - component: {fileID: 1863992380}
   m_Layer: 0
   m_Name: DetectionArea
   m_TagString: Untagged
@@ -873,12 +875,25 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &1863992380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863992377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad51b87a2ccfc24e992000e10f6709a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectedObjs: []
 --- !u!1 &1921324284
 GameObject:
   m_ObjectHideFlags: 0
