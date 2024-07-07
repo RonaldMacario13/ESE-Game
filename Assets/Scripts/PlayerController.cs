@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody2D playerRigidbody;
-    [SerializeField]
+    [SerializeField] private float playerSpeed = 7;
     private float playerSpeed = 7;
     private Vector2 playerDirection;
 
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // dentro.)
     void FixedUpdate()
     {
-        playerRigidbody.MovePosition(playerRigidbody.position + playerDirection * playerSpeed * Time.fixedDeltaTime);
+        playerRigidbody.MovePosition(playerRigidbody.position + playerDirection.normalized * playerSpeed * Time.fixedDeltaTime);
     }
+
 }
