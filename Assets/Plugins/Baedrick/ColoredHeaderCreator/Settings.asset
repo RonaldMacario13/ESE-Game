@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Settings
   m_EditorClassIdentifier: 
   headerSettings:
-    headerText: New Header
-    headerColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    headerText: Terrain
+    headerColor: {r: 0.24150053, g: 0.764151, b: 0.27830222, a: 1}
     textAlignmentOptions: 0
     fontStyleOptions: 0
     fontSize: 12
