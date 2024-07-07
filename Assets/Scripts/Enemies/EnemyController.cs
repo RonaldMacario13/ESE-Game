@@ -3,33 +3,23 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private EnemyObject enemySettings;
+    [SerializeField] private DetectionController _detectionArea;
 
-    private string _name;
-
-    private float _speed = 3.5f;
+    private float _speed;
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
 
-    [SerializeField] private DetectionController _detectionArea;
     
-    private float _health;
-    private float _attack;
-
     private Animator animator;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        animator = GetComponent<Animator>();
-
-        animator.runtimeAnimatorController = enemySettings.animatorController;
-
-        _name = enemySettings.enemyName;
-        _health = enemySettings.health;
         _speed = enemySettings.speed;
-        _attack = enemySettings.attack;
 
+        animator = GetComponent<Animator>();
+        animator.runtimeAnimatorController = enemySettings.animatorController;
     }
 
     void Update()
