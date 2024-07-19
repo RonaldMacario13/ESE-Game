@@ -8,13 +8,13 @@ public class EnemyController : MonoBehaviour
     private float _speed;
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
-
-    
+    private SpriteRenderer _spriteRenderer;
     private Animator animator;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
         _speed = enemySettings.speed;
 
@@ -34,6 +34,13 @@ public class EnemyController : MonoBehaviour
             _direction = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
 
             _rigidbody.MovePosition(_rigidbody.position + _direction * _speed * Time.fixedDeltaTime);
+
+            if (_direction.x > 0)
+            {
+                _spriteRenderer.flipX = false;
+            } else if(_direction.x < 0) {
+                _spriteRenderer.flipX = true;
+            }
         }
     }
 
