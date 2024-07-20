@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public int _health;
     private float _speed;
 
-    // Transform
+    // Components
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
 

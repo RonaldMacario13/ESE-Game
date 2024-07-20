@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-
+    // Wearpon Characteristics
+    [SerializeField] private int _damage = 1;
+    
+    // Components
     [SerializeField] private PlayerController _player;
     private Rigidbody2D _weaponRigidbody2D;
+    
+    // Flip config
     private Vector2 _playerDirection;
     private bool _rightPosition = true;
-    [SerializeField] private int _damage = 1;
 
-    // Start is called before the first frame update
     void Start()
     {
         _weaponRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         _playerDirection = _player._playerDirection;
@@ -23,12 +25,10 @@ public class WeaponController : MonoBehaviour
         if (_playerDirection.x == 1.0f)
         {
             _rightPosition = true;
-            // Debug.Log("Bateu direito");
         }
         else if (_playerDirection.x == -1.0f)
         {
             _rightPosition = false;
-            // Debug.Log("Bateu esquerdo");
         }
 
         FlipWeaponPosition();
@@ -51,10 +51,5 @@ public class WeaponController : MonoBehaviour
         {
             other.GetComponent<EnemyController>()._health =- _damage;
         }
-    }
-
-    void Attack()
-    {
-
     }
 }

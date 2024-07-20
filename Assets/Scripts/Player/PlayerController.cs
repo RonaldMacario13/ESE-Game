@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Player Characteristics
     private int _health;
-    private Rigidbody2D _playerRigidbody;
     [SerializeField] private float _playerSpeed = 7;
     private float _playerInitialSpeed;
     [HideInInspector] public Vector2 _playerDirection;
+
+    // Components
+    private Rigidbody2D _playerRigidbody;
 
     // Attack
     [SerializeField] private GameObject _weapon;
