@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     _playerRigidbody = GetComponent<Rigidbody2D>();
 
     _playerInitialSpeed = _playerSpeed;
+    _health = GetComponent<Health>()._health;
 
     _weapon.GetComponent<BoxCollider2D>().enabled = false;
   }
@@ -27,7 +28,6 @@ public class PlayerController : MonoBehaviour
   void Update()
   {
     _playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-    _health = GetComponent<Health>()._health;
 
     if (_health <= 0)
     {
@@ -58,6 +58,14 @@ public class PlayerController : MonoBehaviour
       _isAttack = false;
       _playerSpeed = _playerInitialSpeed;
       _weapon.GetComponent<BoxCollider2D>().enabled = false;
+    }
+  }
+  
+  void OnCollisionEnter2D(Collision2D other)
+  {
+    if (other.gameObject.CompareTag("Enemy"))
+    {
+      _health--;
     }
   }
 
