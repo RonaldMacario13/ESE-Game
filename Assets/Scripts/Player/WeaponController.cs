@@ -13,6 +13,26 @@ public class WeaponController : MonoBehaviour
     {
         _weaponRigidbody2D = GetComponent<Rigidbody2D>();
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        _playerDirection = _player._playerDirection;
+
+        if (_playerDirection.x == 1.0f)
+        {
+            _rightPosition = true;
+            Debug.Log("Bateu direito");
+        }
+        else if (_playerDirection.x == -1.0f)
+        {
+            _rightPosition = false;
+            Debug.Log("Bateu esquerdo");
+        }
+
+        FlipWeaponPosition();
+    }
+
     void FlipWeaponPosition()
     {
         if(_rightPosition)
