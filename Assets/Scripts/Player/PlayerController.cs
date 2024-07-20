@@ -3,28 +3,30 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private Rigidbody2D playerRigidbody;
-    [SerializeField] private float playerSpeed = 7;
-    private float playerInitialSpeed;
-    private Vector2 playerDirection;
+    private Rigidbody2D _playerRigidbody;
+    [SerializeField] private float _playerSpeed = 7;
+    private float _playerInitialSpeed;
+    [HideInInspector] public Vector2 _playerDirection;
 
     // Attack
-    [SerializeField] private GameObject Weapon;
-    private bool isAttack = false;
+    [SerializeField] private GameObject _weapon;
+    private bool _isAttack = false;
 
     void Start()
     {
-        playerRigidbody = GetComponent<Rigidbody2D>();
+        _playerRigidbody = GetComponent<Rigidbody2D>();
 
-        playerInitialSpeed = playerSpeed;
+        _playerInitialSpeed = _playerSpeed;
 
-        Weapon.SetActive(false);
+        _weapon.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        _playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        // Debug.Log(_playerDirection);
 
         OnAttack();
     }
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour
     // dentro.)
     void FixedUpdate()
     {
-        playerRigidbody.MovePosition(playerRigidbody.position + playerDirection.normalized * playerSpeed * Time.fixedDeltaTime);
+        _playerRigidbody.MovePosition(_playerRigidbody.position + _playerDirection.normalized * _playerSpeed * Time.fixedDeltaTime);
     }
 
     void OnAttack()
@@ -41,17 +43,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             // Debug.Log("Atacando!");
-            isAttack = true;
-            playerSpeed = 0;
-            Weapon.SetActive(true);
+            _isAttack = true;
+            _playerSpeed = 0;
+            // _weapon.SetActive(true);
+            _weapon.GetComponent<BoxCollider2D>().enabled = true;
         }
 
         if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             // Debug.Log("Parou o ataque!");
-            isAttack = false;
-            playerSpeed = playerInitialSpeed;
-            Weapon.SetActive(false);
+            _isAttack = false;
+            _playerSpeed = _playerInitialSpeed;
+            // _weapon.SetActive(false);
+            _weapon.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
