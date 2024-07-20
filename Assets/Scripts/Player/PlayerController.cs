@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    private int _health;
     private Rigidbody2D _playerRigidbody;
     [SerializeField] private float _playerSpeed = 7;
     private float _playerInitialSpeed;
@@ -25,8 +25,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        _health = GetComponent<Health>()._health;
 
-        // Debug.Log(_playerDirection);
+        if (_health <= 0)
+        {
+            Dead();
+        }
 
         OnAttack();
     }
@@ -35,7 +39,7 @@ public class PlayerController : MonoBehaviour
     // dentro.)
     void FixedUpdate()
     {
-        _playerRigidbody.MovePosition(_playerRigidbody.position + _playerDirection.normalized * _playerSpeed * Time.fixedDeltaTime);
+        _playerRigidbody.MovePosition(_playerRigidbody.position + _playerSpeed * Time.fixedDeltaTime * _playerDirection.normalized);
     }
 
     void OnAttack()
@@ -59,4 +63,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Dead()
+    {
+        Debug.Log("Morreu");
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+    }
 }
