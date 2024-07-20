@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
 
         if (_health <= 0)
         {
-            Dead();
+            Death
+    ();
         }
 
         OnAttack();
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Dead()
+    void Death()
     {
         Debug.Log("Morreu");
         Destroy(GameObject.FindGameObjectWithTag("Player"));

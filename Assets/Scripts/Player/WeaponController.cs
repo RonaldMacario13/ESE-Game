@@ -23,12 +23,12 @@ public class WeaponController : MonoBehaviour
         if (_playerDirection.x == 1.0f)
         {
             _rightPosition = true;
-            Debug.Log("Bateu direito");
+            // Debug.Log("Bateu direito");
         }
         else if (_playerDirection.x == -1.0f)
         {
             _rightPosition = false;
-            Debug.Log("Bateu esquerdo");
+            // Debug.Log("Bateu esquerdo");
         }
 
         FlipWeaponPosition();
