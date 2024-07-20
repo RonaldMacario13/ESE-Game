@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
         {
             _direction = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
 
-            _rigidbody.MovePosition(_rigidbody.position + _direction * _speed * Time.fixedDeltaTime);
+            _rigidbody.MovePosition(_rigidbody.position + _speed * Time.fixedDeltaTime * _direction);
         }
     }
 

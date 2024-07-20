@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
         _weapon.GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         _playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -50,19 +49,15 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            // Debug.Log("Atacando!");
             _isAttack = true;
             _playerSpeed = 0;
-            // _weapon.SetActive(true);
             _weapon.GetComponent<BoxCollider2D>().enabled = true;
         }
 
         if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
-            // Debug.Log("Parou o ataque!");
             _isAttack = false;
             _playerSpeed = _playerInitialSpeed;
-            // _weapon.SetActive(false);
             _weapon.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
