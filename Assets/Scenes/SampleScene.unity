@@ -592,6 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySettings: {fileID: 11400000, guid: 73578338c602f6848ba64dd4dd09f818, type: 2}
+  _health: 0
   _detectionArea: {fileID: 1863992380}
 --- !u!1 &674303191
 GameObject:
@@ -1334,6 +1335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95679480684863c4a9efff190429321d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _weaponSettings: {fileID: 11400000, guid: 59f117a3c9c72504481165e6e6b2d619, type: 2}
+  _damage: 0
   _player: {fileID: 698026339}
 --- !u!1 &1863992377
 GameObject:

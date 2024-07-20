@@ -2,71 +2,71 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private EnemyObject enemySettings;
-    [SerializeField] private DetectionController _detectionArea;
 
-    // Enemies Characteristics
-    [HideInInspector] public int _health;
-    private float _speed;
+  // Enemies Characteristics
+  [SerializeField] private EnemyObject enemySettings;
+  [HideInInspector] public int _health;
+  private float _speed;
 
-    // Components
-    private Vector2 _direction;
-    private Rigidbody2D _rigidbody;
+  // Components
+  private Vector2 _direction;
+  private Rigidbody2D _rigidbody;
+  [SerializeField] private DetectionController _detectionArea;
 
-    // Events
-    private bool isDamage;
+  // Events
+  private bool isDamage;
 
-    private Animator animator;
+  private Animator animator;
 
-    void Start()
+  void Start()
+  {
+    _rigidbody = GetComponent<Rigidbody2D>();
+
+    _health = enemySettings._health;
+    _speed = enemySettings._speed;
+
+    animator = GetComponent<Animator>();
+    animator.runtimeAnimatorController = enemySettings._animatorController;
+  }
+
+  void Update()
+  {
+    _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+    if (_health <= 0)
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-
-        _health = enemySettings._health;
-        _speed = enemySettings._speed;
-
-        animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = enemySettings._animatorController;
+      Death();
     }
+  }
 
-    void Update()
+  void FixedUpdate()
+  {
+    if(_detectionArea.detectedObjs.Count > 0)
     {
-        _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+      _direction = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
 
-        if (_health <= 0)
-        {
-            Death();
-        }
+      _rigidbody.MovePosition(_rigidbody.position + _speed * Time.fixedDeltaTime * _direction);
     }
+  }
 
-    void FixedUpdate()
+  private void OnTriggerEnter2D(Collider2D other) {
+    if(other.CompareTag("Weapon") & isDamage == false)
     {
-        if(_detectionArea.detectedObjs.Count > 0)
-        {
-            _direction = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
-
-            _rigidbody.MovePosition(_rigidbody.position + _speed * Time.fixedDeltaTime * _direction);
-        }
+      isDamage = true;
+      _health -= 1;
+      Debug.Log("Vida inimigo:" + _health);
     }
+  }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Weapon") & isDamage == false)
-        {
-            isDamage = true;
-            _health -= 1;
-            Debug.Log("Vida inimigo:" + _health);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other) {
-        if(other.CompareTag("Weapon"))
-        {
-            isDamage = false;
-        }
-    }
-
-    private void Death()
+  private void OnTriggerExit2D(Collider2D other) {
+    if(other.CompareTag("Weapon"))
     {
-        Destroy(gameObject);
+      isDamage = false;
     }
+  }
+
+  private void Death()
+  {
+    Destroy(gameObject);
+  }
 }

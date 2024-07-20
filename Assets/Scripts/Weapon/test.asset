@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23d146fa681f0ef42abe162e52028860, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: f7707b60a2e738d4eab941d5ffc4b428, type: 3}
+  m_Name: test
   m_EditorClassIdentifier: 
-  _health: 1
-  _speed: 3
+  _damage: 1
   _animatorController: {fileID: 0}
