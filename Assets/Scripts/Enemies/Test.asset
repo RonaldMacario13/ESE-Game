@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d146fa681f0ef42abe162e52028860, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  enemyName: Test
-  health: 1
-  speed: 3.5
-  attack: 2
-  animatorController: {fileID: 0}
+  _life: 3
+  _speed: 3
+  _animatorController: {fileID: 0}
