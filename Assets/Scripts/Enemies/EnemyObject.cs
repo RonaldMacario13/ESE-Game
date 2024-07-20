@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyObject : ScriptableObject
 {
 
-    public int _life;
+    public int _health;
     public float _speed;
 
     public RuntimeAnimatorController _animatorController;

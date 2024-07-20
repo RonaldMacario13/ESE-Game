@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private DetectionController _detectionArea;
 
     // Enemies Characteristics
-    private int _life;
+    [HideInInspector] public int _health;
     private float _speed;
 
     // Transform
@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        _life = enemySettings._life;
+        _health = enemySettings._health;
         _speed = enemySettings._speed;
 
         animator = GetComponent<Animator>();
@@ -32,6 +32,11 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if (_health <= 0)
+        {
+            Death();
+        }
     }
 
     void FixedUpdate()
@@ -48,8 +53,8 @@ public class EnemyController : MonoBehaviour
         if(other.CompareTag("Weapon") & isDamage == false)
         {
             isDamage = true;
-            _life -= 1;
-            Debug.Log("Vida inimigo:" + _life);
+            _health -= 1;
+            Debug.Log("Vida inimigo:" + _health);
         }
     }
 
@@ -58,5 +63,10 @@ public class EnemyController : MonoBehaviour
         {
             isDamage = false;
         }
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject);
     }
 }
