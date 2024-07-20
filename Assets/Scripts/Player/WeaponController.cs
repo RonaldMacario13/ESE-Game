@@ -13,3 +13,15 @@ public class WeaponController : MonoBehaviour
     {
         _weaponRigidbody2D = GetComponent<Rigidbody2D>();
     }
+    void FlipWeaponPosition()
+    {
+        if(_rightPosition)
+        {
+            _weaponRigidbody2D.MovePosition(_player.transform.position + new Vector3(1.0f, 0.0f));
+        }
+        else 
+        {
+            _weaponRigidbody2D.MovePosition(_player.transform.position + new Vector3(-1.0f, 0.0f));
+        }
+    }
+}
