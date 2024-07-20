@@ -1,10 +1,11 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "EnemyAttributes", menuName = "Enemy/ New Enemy")]
+[CreateAssetMenu(fileName = "EnemyAttributes", menuName = "Enemy/New Enemy")]
 public class EnemyObject : ScriptableObject
 {
 
-    public float speed;
+    public int _life;
+    public float _speed;
 
-    public RuntimeAnimatorController animatorController;
+    public RuntimeAnimatorController _animatorController;
 }

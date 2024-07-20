@@ -5,21 +5,28 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private EnemyObject enemySettings;
     [SerializeField] private DetectionController _detectionArea;
 
+    // Enemies Characteristics
+    private int _life;
     private float _speed;
+
+    // Transform
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
 
-    
+    // Events
+    private bool isDamage;
+
     private Animator animator;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        _speed = enemySettings.speed;
+        _life = enemySettings._life;
+        _speed = enemySettings._speed;
 
         animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = enemySettings.animatorController;
+        animator.runtimeAnimatorController = enemySettings._animatorController;
     }
 
     void Update()
@@ -37,4 +44,19 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Weapon") & isDamage == false)
+        {
+            isDamage = true;
+            _life -= 1;
+            Debug.Log("Vida inimigo:" + _life);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.CompareTag("Weapon"))
+        {
+            isDamage = false;
+        }
+    }
 }

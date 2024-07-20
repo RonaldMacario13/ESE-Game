@@ -22,5 +22,4 @@ public class DetectionController : MonoBehaviour
             detectedObjs.Remove(other);
         }
     }
-
 }
