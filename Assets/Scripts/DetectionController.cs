@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class DetectionController : MonoBehaviour
 {
-    private string tagTargetDetection = "Player";
+    private readonly string tagTargetDetection = "Player";
 
-    public List<Collider2D> detectedObjs = new List<Collider2D>();
+    public List<Collider2D> detectedObjs = new();
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == tagTargetDetection)
+        if(other.gameObject.CompareTag(tagTargetDetection))
         {
             detectedObjs.Add(other);
         }
@@ -17,7 +17,7 @@ public class DetectionController : MonoBehaviour
     
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.gameObject.tag == tagTargetDetection)
+        if(other.gameObject.CompareTag(tagTargetDetection))
         {
             detectedObjs.Remove(other);
         }
