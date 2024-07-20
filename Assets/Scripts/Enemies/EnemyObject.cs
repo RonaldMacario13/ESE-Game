@@ -5,6 +5,7 @@ public class EnemyObject : ScriptableObject
 {
   public int _health;
   public float _speed;
+  public int _damage;
 
   public RuntimeAnimatorController _animatorController;
 }

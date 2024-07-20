@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
   [SerializeField] private EnemyObject enemySettings;
   [HideInInspector] public int _health;
   private float _speed;
+  private int _damage;
 
   // Components
   private Vector2 _direction;
@@ -24,6 +25,7 @@ public class EnemyController : MonoBehaviour
 
     _health = enemySettings._health;
     _speed = enemySettings._speed;
+    _damage = enemySettings._damage;
 
     animator = GetComponent<Animator>();
     animator.runtimeAnimatorController = enemySettings._animatorController;
