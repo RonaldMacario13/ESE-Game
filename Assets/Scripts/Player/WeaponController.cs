@@ -7,6 +7,7 @@ public class WeaponController : MonoBehaviour
     private Rigidbody2D _weaponRigidbody2D;
     private Vector2 _playerDirection;
     private bool _rightPosition = true;
+    [SerializeField] private int _damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +44,17 @@ public class WeaponController : MonoBehaviour
         {
             _weaponRigidbody2D.MovePosition(_player.transform.position + new Vector3(-1.0f, 0.0f));
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.Equals(GameObject.FindGameObjectsWithTag("Enemy")))
+        {
+            other.GetComponent<EnemyController>()._health =- _damage;
+        }
+    }
+
+    void Attack()
+    {
+
     }
 }
