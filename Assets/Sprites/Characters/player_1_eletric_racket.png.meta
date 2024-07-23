@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f00def9e034e0d949ab52d0c4644ce21
+guid: 9d584cfd156d44945a9ec342c7afac17
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player 1_0
+      name: player_1_eletric_racket_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 437
-        width: 13
-        height: 21
+        x: 0
+        y: 432
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd44c2113efe4b4692414586ab66abe
-      internalID: -176104193
+      spriteID: 38afd2bc2c998cc4c9d1d63da99dcdd3
+      internalID: 2000608899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_1
+      name: player_1_eletric_racket_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 437
-        width: 13
-        height: 21
+        x: 48
+        y: 432
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38aef44d5a2b2ce43bb638af7500e2ad
-      internalID: -393147710
+      spriteID: eaec4b1d0ea82c04b95c30fefeede3bf
+      internalID: -973914994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_2
+      name: player_1_eletric_racket_2
       rect:
         serializedVersion: 2
-        x: 114
-        y: 437
-        width: 13
-        height: 21
+        x: 96
+        y: 432
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd5690556cb0de443b51d13a0948b576
-      internalID: -469968854
+      spriteID: 72d42121402ab024ba93dd6c0bff5b47
+      internalID: 591661512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_3
+      name: player_1_eletric_racket_3
       rect:
         serializedVersion: 2
-        x: 162
-        y: 437
-        width: 13
-        height: 20
+        x: 144
+        y: 432
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e2aadf0d151b1f4cb2506976e2485d1
-      internalID: 374028655
+      spriteID: 1debaaa5be92d3b4ea2c916445713474
+      internalID: 1534928836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_4
+      name: player_1_eletric_racket_4
       rect:
         serializedVersion: 2
-        x: 210
-        y: 437
-        width: 13
-        height: 20
+        x: 192
+        y: 432
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd8eb19a592a7e14ab70712e0535ca14
-      internalID: -1665433976
+      spriteID: 6c4e165d31b723f4e9d85343dd2b9e25
+      internalID: 862872166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_5
+      name: player_1_eletric_racket_5
       rect:
         serializedVersion: 2
-        x: 258
-        y: 437
-        width: 13
-        height: 20
+        x: 240
+        y: 432
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4b5fdc365f99d640835e5548042a372
-      internalID: 1670980498
+      spriteID: eb3bf11947f125a468d36767fa221e65
+      internalID: 1773059219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_6
+      name: player_1_eletric_racket_6
       rect:
         serializedVersion: 2
-        x: 17
-        y: 389
-        width: 15
-        height: 21
+        x: 0
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b42f298769835c640894c32407a1b329
-      internalID: -151983951
+      spriteID: eed9f52223886194f9b5e91909abcaf0
+      internalID: 1048538335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_7
+      name: player_1_eletric_racket_7
       rect:
         serializedVersion: 2
-        x: 65
-        y: 389
-        width: 15
-        height: 21
+        x: 48
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d6b0086c0a71204497389de35fac96d
-      internalID: 1133850814
+      spriteID: 5f58feacbb0239a439a3cf25d850b922
+      internalID: -226913264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_8
+      name: player_1_eletric_racket_8
       rect:
         serializedVersion: 2
-        x: 113
-        y: 389
-        width: 15
-        height: 21
+        x: 96
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c0e80f6bf932c54995a95fa5de77404
-      internalID: -1903754117
+      spriteID: 7a83d53a691668e4ba70b61d6468c3fc
+      internalID: 1736693884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_9
+      name: player_1_eletric_racket_9
       rect:
         serializedVersion: 2
-        x: 161
-        y: 389
-        width: 15
-        height: 20
+        x: 144
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a0bb784e1839aa42b0ad69b16d8f735
-      internalID: 1936533910
+      spriteID: 7611558abf0f446478f2296eb39bb753
+      internalID: 1476754848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_10
+      name: player_1_eletric_racket_10
       rect:
         serializedVersion: 2
-        x: 209
-        y: 389
-        width: 15
-        height: 20
+        x: 192
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf94436be2ec24e4bb103adc50b379da
-      internalID: 810020011
+      spriteID: 901faf7d3167ca640bcb30206be6c582
+      internalID: 1027236912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_11
+      name: player_1_eletric_racket_11
       rect:
         serializedVersion: 2
-        x: 257
-        y: 389
-        width: 15
-        height: 20
+        x: 240
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0fee438c2bec0645b06bab89592e4bd
-      internalID: -1794277288
+      spriteID: 76e08586a696fcb4e9718455f3c8f046
+      internalID: 318401048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_12
+      name: player_1_eletric_racket_12
       rect:
         serializedVersion: 2
-        x: 18
-        y: 341
-        width: 13
-        height: 21
+        x: 0
+        y: 336
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e50be97b4c8ec4c8db57c7d6dca732
-      internalID: -2076492784
+      spriteID: 0021cd764b214d645abfdcd3eeca5360
+      internalID: 2030149859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_13
+      name: player_1_eletric_racket_13
       rect:
         serializedVersion: 2
-        x: 66
-        y: 341
-        width: 13
-        height: 21
+        x: 48
+        y: 336
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bc2645db3ac25040b740d86f29f4d53
-      internalID: 1134854120
+      spriteID: 222000ea5097fd541af1817a454f250d
+      internalID: -1909937602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_14
+      name: player_1_eletric_racket_14
       rect:
         serializedVersion: 2
-        x: 114
-        y: 341
-        width: 13
-        height: 21
+        x: 96
+        y: 336
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +431,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5dd4c46a12d90f4c816e9f92dbc9b6c
-      internalID: -1903799011
+      spriteID: baeecd9c8e189f44b96976501c7588a1
+      internalID: 543222721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_15
+      name: player_1_eletric_racket_15
       rect:
         serializedVersion: 2
-        x: 162
-        y: 341
-        width: 13
-        height: 20
+        x: 144
+        y: 336
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a579930a70a407c4db45b4caac277a75
-      internalID: -553437322
+      spriteID: aa13f7a4a326e3e42af40579579b73aa
+      internalID: 811679527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_16
+      name: player_1_eletric_racket_16
       rect:
         serializedVersion: 2
-        x: 210
-        y: 341
-        width: 13
-        height: 20
+        x: 192
+        y: 336
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +473,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ad8b2c648c77341b9e1f1637a0ea5f
-      internalID: -630418769
+      spriteID: 9f84b8a8a403c4546aa8dfbce7a0407b
+      internalID: -337790913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_17
+      name: player_1_eletric_racket_17
       rect:
         serializedVersion: 2
-        x: 258
-        y: 341
-        width: 13
-        height: 20
+        x: 240
+        y: 336
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +494,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b95c033f4fde744cbb2ef8f36b20f21
-      internalID: -777447183
+      spriteID: a6f1093f9ea2fd64a9bee8d272b7d455
+      internalID: -660970314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_18
+      name: player_1_eletric_racket_18
       rect:
         serializedVersion: 2
-        x: 18
-        y: 293
-        width: 13
-        height: 23
+        x: 0
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,20 +515,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85deabff37304dd48a3affbddd71a4ac
-      internalID: 675114278
+      spriteID: 49892bfbe78880d42847d24024d83a62
+      internalID: -2024429774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_19
+      name: player_1_eletric_racket_19
       rect:
         serializedVersion: 2
-        x: 66
-        y: 293
-        width: 13
-        height: 22
+        x: 48
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,20 +536,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d18b8e45b2fbe3c40829749db7996581
-      internalID: -1639512487
+      spriteID: 7cd862116678b1145901cf7eea169a8d
+      internalID: -1367941134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_20
+      name: player_1_eletric_racket_20
       rect:
         serializedVersion: 2
-        x: 114
-        y: 293
-        width: 13
-        height: 21
+        x: 96
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,20 +557,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f8f9a406050e0f479ea49e0a16adc39
-      internalID: -909005066
+      spriteID: 5e4acc29f20d99c4c8cb284ba85fea0a
+      internalID: 759701624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_21
+      name: player_1_eletric_racket_21
       rect:
         serializedVersion: 2
-        x: 162
-        y: 293
-        width: 13
-        height: 23
+        x: 144
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,20 +578,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4cfb7b22813e2b419b062129842946d
-      internalID: 1253888913
+      spriteID: b90a328581531034b8c0d94bba2e2be9
+      internalID: -600005381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_22
+      name: player_1_eletric_racket_22
       rect:
         serializedVersion: 2
-        x: 210
-        y: 293
-        width: 13
-        height: 22
+        x: 192
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,20 +599,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a3a58b295e75df429594d7a249459c1
-      internalID: 1760874496
+      spriteID: 6e9b51e80b5096848932a4ab339a61cd
+      internalID: -335189323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_23
+      name: player_1_eletric_racket_23
       rect:
         serializedVersion: 2
-        x: 258
-        y: 293
-        width: 13
-        height: 21
+        x: 240
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,20 +620,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd2caff0c9a35054793bf26782544564
-      internalID: 2121387155
+      spriteID: 1e0a4f75bded4c9449426fbfa2a3e108
+      internalID: -1118147576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_24
+      name: player_1_eletric_racket_24
       rect:
         serializedVersion: 2
-        x: 17
-        y: 245
-        width: 15
-        height: 23
+        x: 0
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -628,20 +641,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c82798cc1c3485347a8a0eb6f4214a55
-      internalID: 5023433
+      spriteID: b8e1179ec21d6844b814c7644e29fce2
+      internalID: -1652168648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_25
+      name: player_1_eletric_racket_25
       rect:
         serializedVersion: 2
-        x: 65
-        y: 245
-        width: 15
-        height: 22
+        x: 48
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -649,20 +662,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c481d01bca08e0449175d7ce8a3a80e
-      internalID: 1609367236
+      spriteID: b49ce51fcdc120348bc0164a910cf0bc
+      internalID: -712740198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_26
+      name: player_1_eletric_racket_26
       rect:
         serializedVersion: 2
-        x: 113
-        y: 245
-        width: 15
-        height: 21
+        x: 96
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -670,20 +683,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99c817390cd51ac4c81c5fa1219ee797
-      internalID: 831692283
+      spriteID: 4b9ec9a31e15f50488eee5a3e9497a5b
+      internalID: -719424149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_27
+      name: player_1_eletric_racket_27
       rect:
         serializedVersion: 2
-        x: 161
-        y: 245
-        width: 15
-        height: 23
+        x: 144
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,20 +704,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bbd6846ecd2f7a49b183cf21f9010dd
-      internalID: -753757544
+      spriteID: c6b3bbb753484b042ac47a7cc0464c86
+      internalID: -66567897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_28
+      name: player_1_eletric_racket_28
       rect:
         serializedVersion: 2
-        x: 209
-        y: 245
-        width: 15
-        height: 22
+        x: 192
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -712,20 +725,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 667b906407c965547aa574d4391172d4
-      internalID: 687382526
+      spriteID: 43e8956f5d1272341918336c566b604b
+      internalID: -2114252839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_29
+      name: player_1_eletric_racket_29
       rect:
         serializedVersion: 2
-        x: 257
-        y: 245
-        width: 15
-        height: 21
+        x: 240
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,20 +746,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adf00ab8de17f204e99a57f613297abf
-      internalID: -646103112
+      spriteID: 09b88dc113133a14e98fe05a3f7c0d6f
+      internalID: 1484722724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_30
+      name: player_1_eletric_racket_30
       rect:
         serializedVersion: 2
-        x: 18
-        y: 197
-        width: 13
-        height: 22
+        x: 0
+        y: 192
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -754,20 +767,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f92602e3ee5b3a5408ee53e419c1e04e
-      internalID: 1656347284
+      spriteID: b2e461d34b7225a469123080e90a2326
+      internalID: -1610233173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_31
+      name: player_1_eletric_racket_31
       rect:
         serializedVersion: 2
-        x: 66
-        y: 197
-        width: 13
-        height: 21
+        x: 48
+        y: 192
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -775,20 +788,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8adf463f699dcf84aa960c735fa3f997
-      internalID: -698095159
+      spriteID: 744437a6f98669d4ca28f73286f38c62
+      internalID: -636666288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_32
+      name: player_1_eletric_racket_32
       rect:
         serializedVersion: 2
-        x: 114
-        y: 197
-        width: 13
-        height: 20
+        x: 96
+        y: 192
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -796,20 +809,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36dd79ceca5c56d4aaa39f61da35c6d0
-      internalID: 1709089132
+      spriteID: d4e88bf3db7f9b749989dd4d998e3f6e
+      internalID: 1474101920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_33
+      name: player_1_eletric_racket_33
       rect:
         serializedVersion: 2
-        x: 162
-        y: 197
-        width: 13
-        height: 22
+        x: 144
+        y: 192
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -817,20 +830,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d49de107ba62ff64db59763a4e513eb0
-      internalID: -953164961
+      spriteID: 891faaa5817641848a971f602db694f6
+      internalID: 1313802042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_34
+      name: player_1_eletric_racket_34
       rect:
         serializedVersion: 2
-        x: 210
-        y: 197
-        width: 13
-        height: 21
+        x: 192
+        y: 192
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -838,20 +851,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deb0b7e94ec32784d8124375a5586743
-      internalID: 720438254
+      spriteID: d616d014720a5d249bf62a215151c690
+      internalID: -938655306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_35
+      name: player_1_eletric_racket_35
       rect:
         serializedVersion: 2
-        x: 258
-        y: 197
-        width: 13
-        height: 20
+        x: 240
+        y: 192
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -859,41 +872,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e69c434ffff75bd4cb62c45dcdee2e53
-      internalID: -1089972215
+      spriteID: 27e855e4ddfea1c4bb41beaa198c8ed1
+      internalID: -1183548351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_36
+      name: player_1_eletric_racket_36
       rect:
         serializedVersion: 2
-        x: 15
-        y: 149
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb2d02468177da0498517a8a61c2dd1f
-      internalID: -923376868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player 1_37
-      rect:
-        serializedVersion: 2
-        x: 65
+        x: 0
         y: 144
-        width: 20
-        height: 26
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -901,20 +893,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: beb959ade010d3b47b8ddd8e33fb9b7c
-      internalID: 1363668257
+      spriteID: 40b84b15c3d2b3145bc33944cd13aeb6
+      internalID: -1483341979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_38
+      name: player_1_eletric_racket_37
       rect:
         serializedVersion: 2
-        x: 114
-        y: 148
-        width: 19
-        height: 21
+        x: 48
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -922,20 +914,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee44c52bb3535c4a9976509b82e7eda
-      internalID: 940173642
+      spriteID: 822ca0836aa474f4cb03bd8239e66429
+      internalID: -1589374479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_39
+      name: player_1_eletric_racket_38
       rect:
         serializedVersion: 2
-        x: 162
-        y: 149
-        width: 13
-        height: 19
+        x: 96
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -943,20 +935,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 857175d68b33c3c40ab5604f37353e31
-      internalID: -506196589
+      spriteID: 272b88a760dd42c4c8a1113853178630
+      internalID: -1282557275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_40
+      name: player_1_eletric_racket_39
       rect:
         serializedVersion: 2
-        x: 19
-        y: 101
-        width: 16
-        height: 20
+        x: 144
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -964,20 +956,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e180d04d185de684dbf170c48300a081
-      internalID: -1099647978
+      spriteID: d628782cb808fc4418f5caccdc9d6a32
+      internalID: -1637640942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_41
+      name: player_1_eletric_racket_40
       rect:
         serializedVersion: 2
-        x: 56
-        y: 99
-        width: 34
-        height: 23
+        x: 0
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -985,20 +977,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 316a096ece7e3524a8f735a09a4dd805
-      internalID: -512354824
+      spriteID: d3b7d0b8f354ba54a837d2575feb9df4
+      internalID: 1485856097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_42
+      name: player_1_eletric_racket_41
       rect:
         serializedVersion: 2
-        x: 107
-        y: 101
-        width: 20
-        height: 21
+        x: 48
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1006,20 +998,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d211162de158bf47a70e85ac6eef7de
-      internalID: -28923939
+      spriteID: f43af411020a9a7439f0da3bcd344fea
+      internalID: -632523880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_43
+      name: player_1_eletric_racket_42
       rect:
         serializedVersion: 2
-        x: 161
-        y: 101
-        width: 15
-        height: 19
+        x: 96
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1027,20 +1019,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 042b5761e36c7bf48b2803514b508e72
-      internalID: 1922960882
+      spriteID: c8d1744e68f4f7b4e9326dd83ed12c77
+      internalID: -1065552833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_44
+      name: player_1_eletric_racket_43
       rect:
         serializedVersion: 2
-        x: 18
-        y: 53
-        width: 17
-        height: 20
+        x: 144
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1048,20 +1040,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d5b7ee77e2d03c43989eb54014d53c4
-      internalID: 1691473093
+      spriteID: 16bc65489cf368c41987a54870c64361
+      internalID: -1025665658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_45
+      name: player_1_eletric_racket_44
       rect:
         serializedVersion: 2
-        x: 59
-        y: 53
-        width: 22
-        height: 21
+        x: 0
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1069,20 +1061,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8568d8b2ef81c741b67ff6e6f1aaa95
-      internalID: 2022933277
+      spriteID: 084fb2e9e667767419022e13e7f3d491
+      internalID: 510874917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_46
+      name: player_1_eletric_racket_45
       rect:
         serializedVersion: 2
-        x: 108
-        y: 53
-        width: 19
-        height: 20
+        x: 48
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1090,20 +1082,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c26a84232e70484dae6cea823bdde45
-      internalID: -71808452
+      spriteID: 184a40bfc558746478030944da5c5d7b
+      internalID: 563197951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_47
+      name: player_1_eletric_racket_46
       rect:
         serializedVersion: 2
-        x: 162
-        y: 53
-        width: 13
-        height: 19
+        x: 96
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1111,20 +1103,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab2c28a8453681a44b1a519d3150a418
-      internalID: -1981557631
+      spriteID: 4617659a310f84a418a0210f9191e211
+      internalID: 1287707275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_48
+      name: player_1_eletric_racket_47
       rect:
         serializedVersion: 2
-        x: 18
-        y: 5
-        width: 16
-        height: 18
+        x: 144
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1132,20 +1124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de82961c58443c24c87bca9ff6702dcd
-      internalID: 633412031
+      spriteID: a5739b6aebc592846b105f4d241c7e35
+      internalID: 1059139648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_49
+      name: player_1_eletric_racket_48
       rect:
         serializedVersion: 2
-        x: 66
-        y: 5
-        width: 17
-        height: 16
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1153,20 +1145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f663ccddf2984e489ed546bc4f319c0
-      internalID: -1752963077
+      spriteID: 40d09efcb28349c439b81d3db6be9c4d
+      internalID: -1626587669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_50
+      name: player_1_eletric_racket_49
       rect:
         serializedVersion: 2
-        x: 113
-        y: 5
-        width: 21
-        height: 13
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1174,8 +1166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9936f44724e0cd44a611d748fff2090
-      internalID: 441617784
+      spriteID: 3903b719ea60e084092caa863975db17
+      internalID: 660962178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_1_eletric_racket_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468fa4d2b9aeddf4dad8fd85c26c7079
+      internalID: 459049914
       vertices: []
       indices: 
       edges: []
@@ -1191,57 +1204,57 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player 1_0: -176104193
-      player 1_1: -393147710
-      player 1_10: 810020011
-      player 1_11: -1794277288
-      player 1_12: -2076492784
-      player 1_13: 1134854120
-      player 1_14: -1903799011
-      player 1_15: -553437322
-      player 1_16: -630418769
-      player 1_17: -777447183
-      player 1_18: 675114278
-      player 1_19: -1639512487
-      player 1_2: -469968854
-      player 1_20: -909005066
-      player 1_21: 1253888913
-      player 1_22: 1760874496
-      player 1_23: 2121387155
-      player 1_24: 5023433
-      player 1_25: 1609367236
-      player 1_26: 831692283
-      player 1_27: -753757544
-      player 1_28: 687382526
-      player 1_29: -646103112
-      player 1_3: 374028655
-      player 1_30: 1656347284
-      player 1_31: -698095159
-      player 1_32: 1709089132
-      player 1_33: -953164961
-      player 1_34: 720438254
-      player 1_35: -1089972215
-      player 1_36: -923376868
-      player 1_37: 1363668257
-      player 1_38: 940173642
-      player 1_39: -506196589
-      player 1_4: -1665433976
-      player 1_40: -1099647978
-      player 1_41: -512354824
-      player 1_42: -28923939
-      player 1_43: 1922960882
-      player 1_44: 1691473093
-      player 1_45: 2022933277
-      player 1_46: -71808452
-      player 1_47: -1981557631
-      player 1_48: 633412031
-      player 1_49: -1752963077
-      player 1_5: 1670980498
-      player 1_50: 441617784
-      player 1_6: -151983951
-      player 1_7: 1133850814
-      player 1_8: -1903754117
-      player 1_9: 1936533910
+      player_1_eletric_racket_0: 2000608899
+      player_1_eletric_racket_1: -973914994
+      player_1_eletric_racket_10: 1027236912
+      player_1_eletric_racket_11: 318401048
+      player_1_eletric_racket_12: 2030149859
+      player_1_eletric_racket_13: -1909937602
+      player_1_eletric_racket_14: 543222721
+      player_1_eletric_racket_15: 811679527
+      player_1_eletric_racket_16: -337790913
+      player_1_eletric_racket_17: -660970314
+      player_1_eletric_racket_18: -2024429774
+      player_1_eletric_racket_19: -1367941134
+      player_1_eletric_racket_2: 591661512
+      player_1_eletric_racket_20: 759701624
+      player_1_eletric_racket_21: -600005381
+      player_1_eletric_racket_22: -335189323
+      player_1_eletric_racket_23: -1118147576
+      player_1_eletric_racket_24: -1652168648
+      player_1_eletric_racket_25: -712740198
+      player_1_eletric_racket_26: -719424149
+      player_1_eletric_racket_27: -66567897
+      player_1_eletric_racket_28: -2114252839
+      player_1_eletric_racket_29: 1484722724
+      player_1_eletric_racket_3: 1534928836
+      player_1_eletric_racket_30: -1610233173
+      player_1_eletric_racket_31: -636666288
+      player_1_eletric_racket_32: 1474101920
+      player_1_eletric_racket_33: 1313802042
+      player_1_eletric_racket_34: -938655306
+      player_1_eletric_racket_35: -1183548351
+      player_1_eletric_racket_36: -1483341979
+      player_1_eletric_racket_37: -1589374479
+      player_1_eletric_racket_38: -1282557275
+      player_1_eletric_racket_39: -1637640942
+      player_1_eletric_racket_4: 862872166
+      player_1_eletric_racket_40: 1485856097
+      player_1_eletric_racket_41: -632523880
+      player_1_eletric_racket_42: -1065552833
+      player_1_eletric_racket_43: -1025665658
+      player_1_eletric_racket_44: 510874917
+      player_1_eletric_racket_45: 563197951
+      player_1_eletric_racket_46: 1287707275
+      player_1_eletric_racket_47: 1059139648
+      player_1_eletric_racket_48: -1626587669
+      player_1_eletric_racket_49: 660962178
+      player_1_eletric_racket_5: 1773059219
+      player_1_eletric_racket_50: 459049914
+      player_1_eletric_racket_6: 1048538335
+      player_1_eletric_racket_7: -226913264
+      player_1_eletric_racket_8: 1736693884
+      player_1_eletric_racket_9: 1476754848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
