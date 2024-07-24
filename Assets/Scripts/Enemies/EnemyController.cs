@@ -12,15 +12,16 @@ public class EnemyController : MonoBehaviour
     // Transform
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
-
+    feat/animations
+    private SpriteRenderer _spriteRenderer;
     // Events
     private bool isDamage;
-
     private Animator animator;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
         _life = enemySettings._life;
         _speed = enemySettings._speed;
@@ -41,6 +42,13 @@ public class EnemyController : MonoBehaviour
             _direction = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
 
             _rigidbody.MovePosition(_rigidbody.position + _direction * _speed * Time.fixedDeltaTime);
+
+            if (_direction.x > 0)
+            {
+                _spriteRenderer.flipX = false;
+            } else if(_direction.x < 0) {
+                _spriteRenderer.flipX = true;
+            }
         }
     }
 

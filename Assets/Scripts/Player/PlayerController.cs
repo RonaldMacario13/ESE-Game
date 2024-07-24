@@ -5,8 +5,10 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRigidbody;
     [SerializeField] private float playerSpeed = 7;
+    private Animator _playerAnimator;
     private float playerInitialSpeed;
     private Vector2 playerDirection;
+    private SpriteRenderer _spriteRenderer;
 
     // Attack
     [SerializeField] private GameObject Weapon;
@@ -15,6 +17,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+
+        _playerAnimator = GetComponent<Animator>();
+
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
         playerInitialSpeed = playerSpeed;
 
@@ -27,6 +33,15 @@ public class PlayerController : MonoBehaviour
         playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         OnAttack();
+
+        if (playerDirection.sqrMagnitude > 0)
+        {
+            _playerAnimator.SetBool("isWalking", true); 
+        } else {
+            _playerAnimator.SetBool("isWalking", false);
+        }
+
+        Flip();
     }
 
     // Esse método é chamado a cada 0.2 segundos (Para um melhor controle da física do jogo deve ser feita aqui 
@@ -40,7 +55,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            // Debug.Log("Atacando!");
+            _playerAnimator.SetBool("racket", true);
+            _playerAnimator.SetTrigger("isAttacking");
             isAttack = true;
             playerSpeed = 0;
             Weapon.SetActive(true);
@@ -55,4 +71,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Flip() {
+        if (playerDirection.x > 0)
+        {
+            _spriteRenderer.flipX = false;
+        } else if(playerDirection.x < 0)
+        {
+            _spriteRenderer.flipX = true;
+        }
+    }
 }
