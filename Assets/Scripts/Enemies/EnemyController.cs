@@ -12,7 +12,6 @@ public class EnemyController : MonoBehaviour
     // Transform
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
-    feat/animations
     private SpriteRenderer _spriteRenderer;
     // Events
     private bool isDamage;
