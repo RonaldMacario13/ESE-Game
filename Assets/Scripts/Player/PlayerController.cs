@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerDirection;
     private SpriteRenderer _spriteRenderer;
 
+    // Attack
+    [SerializeField] private GameObject Weapon;
     private bool isAttack = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
         playerInitialSpeed = playerSpeed;
+
+        Weapon.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,20 +53,21 @@ public class PlayerController : MonoBehaviour
 
     void OnAttack()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             _playerAnimator.SetBool("racket", true);
             _playerAnimator.SetTrigger("isAttacking");
-            Debug.Log("Atacando!");
             isAttack = true;
             playerSpeed = 0;
+            Weapon.SetActive(true);
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetMouseButtonUp(0))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
-            Debug.Log("Parou o ataque!");
+            // Debug.Log("Parou o ataque!");
             isAttack = false;
             playerSpeed = playerInitialSpeed;
+            Weapon.SetActive(false);
         }
     }
 
