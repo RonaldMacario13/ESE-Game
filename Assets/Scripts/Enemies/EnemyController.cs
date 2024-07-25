@@ -13,15 +13,20 @@ public class EnemyController : MonoBehaviour
   private Vector2 _direction;
   private Rigidbody2D _rigidbody;
   [SerializeField] private DetectionController _detectionArea;
+  private SpriteRenderer _spriteRenderer;
+  public AudioSource audioSourceMosquito;
+  public float stepInterval = 3f;
+  private float nextStepTime = 0f;
 
   // Events
   private bool isDamage;
 
   private Animator animator;
 
-  void Start()
-  {
-    _rigidbody = GetComponent<Rigidbody2D>();
+    void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
     _health = enemySettings._health;
     _speed = enemySettings._speed;
@@ -45,13 +50,27 @@ public class EnemyController : MonoBehaviour
   {
     if(_detectionArea.detectedObjs.Count > 0)
     {
+            if (Time.time >= nextStepTime)
+            {
+                audioSourceMosquito.Play();
+                nextStepTime = Time.time + stepInterval;
+            } 
       _direction = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
 
       _rigidbody.MovePosition(_rigidbody.position + _speed * Time.fixedDeltaTime * _direction);
-    }
+
+      if (_direction.x > 0)
+            {
+                _spriteRenderer.flipX = false;
+            } else if(_direction.x < 0) {
+                _spriteRenderer.flipX = true;
+            }
+    } else {
+            audioSourceMosquito.Stop();
+  }
   }
 
-  private void OnTriggerEnter2D(Collider2D other) {
+  void OnTriggerEnter2D(Collider2D other) {
     if(other.CompareTag("Weapon") & isDamage == false)
     {
       isDamage = true;
@@ -60,14 +79,14 @@ public class EnemyController : MonoBehaviour
     }
   }
 
-  private void OnTriggerExit2D(Collider2D other) {
+  void OnTriggerExit2D(Collider2D other) {
     if(other.CompareTag("Weapon"))
     {
       isDamage = false;
     }
   }
 
-  private void Death()
+  void Death()
   {
     Destroy(gameObject);
   }

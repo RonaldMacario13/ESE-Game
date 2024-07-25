@@ -15,4 +15,4 @@ MonoBehaviour:
   _health: 3
   _speed: 3
   _damage: 0
-  _animatorController: {fileID: 0}
+  _animatorController: {fileID: 9100000, guid: e8dad4bba0d5bd14c8aefe578e51dda5, type: 2}

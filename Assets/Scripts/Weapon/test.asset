@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   _damage: 1
-  _animatorController: {fileID: 0}
+  _animatorController: {fileID: 9100000, guid: de99bbdc94b3ff24caf8b8162eb8f0be, type: 2}
