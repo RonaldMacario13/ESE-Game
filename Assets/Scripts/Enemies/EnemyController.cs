@@ -13,6 +13,9 @@ public class EnemyController : MonoBehaviour
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
+    public AudioSource audioSourceMosquito;
+    public float stepInterval = 3f;
+    private float nextStepTime = 0f;
     // Events
     private bool isDamage;
     private Animator animator;
@@ -38,8 +41,15 @@ public class EnemyController : MonoBehaviour
     {
         if(_detectionArea.detectedObjs.Count > 0)
         {
+            // print("Era para rodar o som");
+            if (Time.time >= nextStepTime)
+            {
+                audioSourceMosquito.Play();
+                nextStepTime = Time.time + stepInterval;
+            } 
             _direction = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
 
+            
             _rigidbody.MovePosition(_rigidbody.position + _direction * _speed * Time.fixedDeltaTime);
 
             if (_direction.x > 0)
@@ -48,6 +58,8 @@ public class EnemyController : MonoBehaviour
             } else if(_direction.x < 0) {
                 _spriteRenderer.flipX = true;
             }
+        } else {
+            audioSourceMosquito.Stop();
         }
     }
 

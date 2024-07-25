@@ -7,6 +7,7 @@ public class DumpsterController : MonoBehaviour
 
     [SerializeField] private DetectionController _detectionArea;
     private Animator _animator;
+    public AudioSource audioSourceClosingDoor;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,9 @@ public class DumpsterController : MonoBehaviour
         if (_detectionArea.detectedObjs.Count > 0)
         {
             if (Input.GetKeyDown("c"))
-            {     
-            _animator.SetBool("isPressed", true);
+            {
+                audioSourceClosingDoor.Play();
+                _animator.SetBool("isPressed", true);
             }
         }
     }
