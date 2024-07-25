@@ -1,4 +1,7 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +12,15 @@ public class PlayerController : MonoBehaviour
     private float playerInitialSpeed;
     private Vector2 playerDirection;
     private SpriteRenderer _spriteRenderer;
+    public AudioSource audioSourceStep;
+    public AudioSource audioSourcePoison;
+    public AudioSource audioSourceRacket;
+    public AudioSource audioSourceShoe;
+    public float stepInterval = 0.5f;
+    private float nextStepTime = 0f;
+    private bool racket = true;
+    private bool poison = false;
+    private bool shoe = false;
 
     // Attack
     [SerializeField] private GameObject Weapon;
@@ -25,6 +37,14 @@ public class PlayerController : MonoBehaviour
         playerInitialSpeed = playerSpeed;
 
         Weapon.SetActive(false);
+
+        if (racket) {
+            _playerAnimator.SetBool("racket", true);
+        } else if (poison) {
+            _playerAnimator.SetBool("poison", true);
+        } else {
+            _playerAnimator.SetBool("shoe", true);
+        }
     }
 
     // Update is called once per frame
@@ -36,9 +56,15 @@ public class PlayerController : MonoBehaviour
 
         if (playerDirection.sqrMagnitude > 0)
         {
-            _playerAnimator.SetBool("isWalking", true); 
+            _playerAnimator.SetBool("isWalking", true);
+            if (Time.time >= nextStepTime)
+            {
+                audioSourceStep.Play();
+                nextStepTime = Time.time + stepInterval;
+            } 
         } else {
             _playerAnimator.SetBool("isWalking", false);
+            audioSourceStep.Stop();
         }
 
         Flip();
@@ -55,8 +81,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            _playerAnimator.SetBool("racket", true);
             _playerAnimator.SetTrigger("isAttacking");
+            if (racket) {
+                audioSourceRacket.Play();
+            } else if (poison) {
+                audioSourcePoison.Play();
+            } else {
+                audioSourceShoe.Play();
+            }
             isAttack = true;
             playerSpeed = 0;
             Weapon.SetActive(true);

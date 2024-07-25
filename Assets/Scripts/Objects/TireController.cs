@@ -6,6 +6,8 @@ public class TireController : MonoBehaviour
 {
     [SerializeField] private DetectionController _detectionArea;
     private Animator _animator;
+    public AudioSource audioSourceWater;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,9 @@ public class TireController : MonoBehaviour
         if (_detectionArea.detectedObjs.Count > 0)
         {
             if (Input.GetKeyDown("c"))
-            {     
-            _animator.SetTrigger("isPressed");
+            {
+                audioSourceWater.Play();
+                _animator.SetTrigger("isPressed");
             }
         }
     }
