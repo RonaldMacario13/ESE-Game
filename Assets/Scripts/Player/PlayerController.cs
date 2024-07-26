@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -132,6 +133,7 @@ public class PlayerController : MonoBehaviour
   void Death()
   {
     Debug.Log("Morreu");
+    SceneManager.LoadScene(5);
     Destroy(GameObject.FindGameObjectWithTag("Player"));
   }
 }
