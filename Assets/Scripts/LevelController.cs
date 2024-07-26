@@ -18,6 +18,6 @@ public class TrocarFase : MonoBehaviour
     
     private IEnumerator WaitAndChangeScene(string scene, float delay) {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(8);
     }
 }

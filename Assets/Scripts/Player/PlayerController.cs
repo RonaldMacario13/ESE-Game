@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
   // Player Characteristics
-  [SerializeField] private int _health;
+  [SerializeField] public int _health;
   [SerializeField] private float _playerSpeed = 7;
   private float _playerInitialSpeed;
   [HideInInspector] public Vector2 _playerDirection;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
   public AudioSource audioSourcePoison;
   public AudioSource audioSourceRacket;
   public AudioSource audioSourceShoe;
+  public Text lifeText;
   public float stepInterval = 0.5f;
   private float nextStepTime = 0f;
 
@@ -47,6 +49,8 @@ public class PlayerController : MonoBehaviour
   void Update()
   {
     _playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+    lifeText.text = "Vidas: " + _health.ToString();
 
     if (_health <= 0)
     {
@@ -133,7 +137,7 @@ public class PlayerController : MonoBehaviour
   void Death()
   {
     Debug.Log("Morreu");
-    SceneManager.LoadScene(5);
+    SceneManager.LoadScene(7);
     Destroy(GameObject.FindGameObjectWithTag("Player"));
   }
 }

@@ -8,6 +8,9 @@ public class EnemyController : MonoBehaviour
   [HideInInspector] public int _health;
   private float _speed;
   private int _damage;
+  private bool _isDead = false;
+
+  private CircleCollider2D enemyBoxCollider;
 
   // Components
   private Vector2 _direction;
@@ -31,6 +34,7 @@ public class EnemyController : MonoBehaviour
     _health = enemySettings._health;
     _speed = enemySettings._speed;
     _damage = enemySettings._damage;
+    enemyBoxCollider = GetComponent<CircleCollider2D>();
 
     animator = GetComponent<Animator>();
     animator.runtimeAnimatorController = enemySettings._animatorController;
@@ -38,16 +42,21 @@ public class EnemyController : MonoBehaviour
 
   void Update()
   {
+    if (!_isDead)
+    {
     _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
     if (_health <= 0)
     {
       Death();
+    } 
     }
   }
 
   void FixedUpdate()
   {
+    if (!_isDead)
+    {
     if(_detectionArea.detectedObjs.Count > 0)
     {
             if (Time.time >= nextStepTime)
@@ -67,27 +76,36 @@ public class EnemyController : MonoBehaviour
             }
     } else {
             audioSourceMosquito.Stop();
-  }
+  }   
+    }
   }
 
   void OnTriggerEnter2D(Collider2D other) {
+    if (!_isDead)
+    {  
     if(other.CompareTag("Weapon") & isDamage == false)
     {
       isDamage = true;
       _health -= 1;
       Debug.Log("Vida inimigo:" + _health);
     }
+    }
   }
 
   void OnTriggerExit2D(Collider2D other) {
+    if (!_isDead) {
     if(other.CompareTag("Weapon"))
     {
       isDamage = false;
+    }
     }
   }
 
   void Death()
   {
-    Destroy(gameObject);
+    animator.SetTrigger("isDead");
+    _isDead = true;
+    enemyBoxCollider.enabled = false;
+    audioSourceMosquito.Stop();
   }
 }

@@ -6,6 +6,7 @@ public class AmbulanceController : MonoBehaviour
 {
     [SerializeField] private DetectionController _detectionArea;
     private Animator _animator;
+    private PlayerController playerController = new PlayerController();
     
     void Start()
     {
@@ -22,6 +23,8 @@ public class AmbulanceController : MonoBehaviour
         if (_detectionArea.detectedObjs.Count > 0)
         {
             _animator.SetBool("isDetected", true);
+            playerController._health = 10;
+            print(playerController._health);
         } else if (_detectionArea.detectedObjs.Count == 0)
         {
             _animator.SetBool("isDetected", false);
