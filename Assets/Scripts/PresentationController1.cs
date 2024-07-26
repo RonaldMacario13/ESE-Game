@@ -18,14 +18,14 @@ public class PresentationController1 : MonoBehaviour
         title.text = title1;
         text.text = text1;
             
-        Invoke(nameof(ChangeText), 20f);
+        Invoke(nameof(ChangeText), 25f);
     }
 
     void ChangeText() {
         title.text = title2;
         text.text = text2;
 
-        Invoke(nameof(ChangeScene), 20f);
+        Invoke(nameof(ChangeScene), 25f);
     }
 
     void ChangeScene() {
