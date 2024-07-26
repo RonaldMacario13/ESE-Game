@@ -29,7 +29,7 @@ public class PresentationController1 : MonoBehaviour
     }
 
     void ChangeScene() {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(4);
     }
 
 }
