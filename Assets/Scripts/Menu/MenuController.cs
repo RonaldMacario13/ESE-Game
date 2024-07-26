@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour
     // [SerializeField] private string settingsScene;
 
     public void PlayNewGame() {
-        StartCoroutine(WaitAndChangeScene(newGameScene, 0.7f));
+        StartCoroutine(WaitAndChangeScene(newGameScene, 0.2f));
     }
 
     public void Settings() {
