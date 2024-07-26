@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class LoadingController : MonoBehaviour
 {
     public Text loadingText;
+    [SerializeField] private int _sceneNumber = 2;
 
     readonly List<string> loadingPhrases = new()
     {
@@ -31,6 +32,6 @@ public class LoadingController : MonoBehaviour
     }
 
     void ChangeScene() {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(_sceneNumber);
     }
 }
