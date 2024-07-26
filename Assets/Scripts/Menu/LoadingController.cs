@@ -31,6 +31,6 @@ public class LoadingController : MonoBehaviour
     }
 
     void ChangeScene() {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(3);
     }
 }
